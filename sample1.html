@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+function showpersonal() {
+  document.getElementById("personaldetails").style.display = "block";
+  document.getElementById("academicdetails").style.display = "none";
+  document.getElementById("projectdetails").style.display = "none";
+  
+}
+function showacademic() {
+  document.getElementById("academicdetails").style.display = "block";
+  document.getElementById("personaldetails").style.display = "none";
+  document.getElementById("projectdetails").style.display = "none";
+}
+function showproject() {
+  document.getElementById("projectdetails").style.display = "block";
+  document.getElementById("personaldetails").style.display = "none";
+  document.getElementById("academicdetails").style.display = "none";
+}
+</script>
+ <style>
+#personaldetails { display: none; }
+#academicdetails { display: none; }
+#projectdetails { display: none; }
+
+.vertical-menu {
+  width: 200px;
+  position: fixed;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 50px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.texting{
+  margin-left: 200px;
+  padding: 0px 10px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 25px;
+  text-align: left;
+  color:black;
+  border-bottom: 1px solid #ddd; 
+}
+</style>
+</head>
+<body background="welcome.jpg">
+<br>
+<br>
+
+  <div id="personaldetails" class="texting">
+    <center><h1>Personal details</h1></center>
+		<table style="width:100%">
+		<tr>
+			<td>Name</td>
+			<td>Bavya Varatharajan</td> 
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><pre>262,Trichy Main Road,
+Keeranur-622502</pre></td> 
+		</tr>
+		<tr>
+			<td>Contact</td>
+			<td>8754249646</td> 
+		</tr>
+		<tr>
+			<td>Mail</td>
+			<td>vostrogeek@gmail.com</td> 
+		</tr>
+		</table>
+  </div>
+
+  <div id="academicdetails" class="texting">
+    <center><h1>Academic details</h1><center>
+	<table style="width:100%">
+		<tr>
+			<th>Qualification</th>
+			<th>Institution</th> 
+			<th>Marks/CGPA</th>
+		</tr>
+		<tr>
+			<td>SSLC</td>
+			<td>Punitha Arockia Annai Hr.Sec School,Keeranur</td> 
+			<td>498/500</td>
+		</tr>
+		<tr>
+			<td>HSC</td>
+			<td>SRV Hi-Tech Matric Hr.Sec School,Namakkal</td> 
+			<td>1179/1200</td>
+		</tr>
+		<tr>
+			<td>B.E., CSE</td>
+			<td>CEG,Anna University,Chennai</td> 
+			<td>8.57</td>
+		</tr>
+		</table>
+  </div>
+
+  <div id="projectdetails" class="texting">
+    <center><h1>Project details</h1></center>
+	<table style="width:100%">
+		<tr>
+			<th>Title</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>Dictionary using Hashing</td>
+			<td>Way to insert,delete and search for words in a dictionary using Separate Chaining concept of Hashing in c++</td>
+		</tr>
+		<tr>
+			<td>Scribe Requirement Management for Visually Challenged Students</td>
+			<td>It helps to match the scribe need for exams with the volunteers interested in scribing, developed using oracle 11g and java(jdbc)</td>
+		</tr>
+		<tr>
+			<td>Simple website for conducting quizzes</td>
+			<td> A website which allows user to attend a quiz while logging scores and maintaining leaderboard built using Flask and hosted on AWS Lightsail</td>
+		</tr>
+	</table>
+  </div>
+
+ 
+<div class="vertical-menu">
+<center><a href="#" onclick="showpersonal()">Personal details</a></center><br>
+<center><a href="#" onclick="showacademic()">Academic details</a></center><br>
+<center><a href="#" onclick="showproject()">Project details</a></center><br>
+</div>
+</body>
+</html>
